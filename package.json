@@ -21,6 +21,7 @@
     "crypto": "^1.0.1",
     "express": "^4.16.2",
     "lodash": "^4.17.4",
+    "memory-cache": "^0.2.0",
     "moment": "^2.19.1",
     "mongoose": "^4.12.3",
     "qs": "^6.5.1",
