@@ -1,3 +1,4 @@
 module.exports = {
-    accessTokenController: require('./accessTokenController')
+    accessTokenController: require('./accessTokenController'),
+    menuController: require('./menuController')
 }

@@ -30,9 +30,12 @@ app.use(router) // router
 
 // 统一错误处理
 
-app.use(({ code = -1, message, stack }, req, res, next) => { // eslint-disable-line
-    res.json({ code, msg: message })
-    if (code > 10005 || req.method === 'OPTIONS') return
+app.use((err, req, res, next) => { // eslint-disable-line
+
+    res.json({ code: -1, msg: err.message })
+
+    console.log(err);
+    // if (code > 10005 || req.method === 'OPTIONS') return
 
 })
 
