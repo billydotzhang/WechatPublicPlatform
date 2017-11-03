@@ -3,5 +3,5 @@ module.exports = {
 
     DEFAULT_NODE_ENV: 'dev', // 默认是开发环境
 
-    PORT: 3211,
+    PORT: 8100,
 }
