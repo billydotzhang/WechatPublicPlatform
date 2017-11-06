@@ -5,6 +5,7 @@ const express = require('express');
 
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+
 // const logger = require( 'morgan' )
 // const auth = require('./app/midware/auth');
 
@@ -37,7 +38,7 @@ app.use(function (req, res, next) {
 app.use(({ code = -1, message, stack }, req, res, next) => { // eslint-disable-line
     res.json({ code, msg: message })
     if (req.method === 'OPTIONS') return
-    console.log(err);
+    console.log('err:==>', message);
 })
 
 app.listen(CONFIG.PORT);
