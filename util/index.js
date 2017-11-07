@@ -1,3 +1,4 @@
 module.exports = {
-    toolset: require('./toolset')
+    toolset: require('./toolset'),
+    other: require('./other'),
 }

@@ -2,6 +2,8 @@ const CONFIG = require('./config');
 
 const path = require('path');
 const express = require('express');
+const nunjucks = require('nunjucks');
+
 
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -13,6 +15,7 @@ const app = express();
 const router = require('./routes')
 
 
+
 mongoose.Promise = global.Promise;
 mongoose.connect(CONFIG.MONGO_DB)
 
@@ -22,6 +25,10 @@ app.locals.moment = require('moment');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+nunjucks.configure('views', {
+    autoescape: true,
+    express: app
+});
 
 // 检验ts和token
 // app.use(auth.auth);

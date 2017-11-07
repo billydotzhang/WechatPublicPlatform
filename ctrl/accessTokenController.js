@@ -8,7 +8,7 @@ module.exports = {
     async getAccessToken(req, res, next) {
         const grant_type = CONFIG.WECHAT.GRANT_TYPE
         const appid = CONFIG.WECHAT.APPID
-        const secret = CONFIG.WECHAT.SECRET
+        const secret = CONFIG.WECHAT.APP_SECRET
         const cacheData = cache.get('accessToken')
         let result = null
 
