@@ -1,0 +1,29 @@
+{
+/**
+   * Application configuration section
+   * http://pm2.keymetrics.io/docs/usage/application-declaration/
+   */
+  "apps": [
+    // First application
+    {
+      "name": "wechatpublicplatform",  // 应用名称
+      "script": "./app.js",  // 实际启动脚本
+      "cwd": "./",  // 当前工作路径
+      "watch": true,
+      "max_memory_restart": "300M", // 内存
+      "ignore_watch": [  // 从监控目录中排除
+        "node_modules",
+        "logs"
+      ],
+      "watch_options": {
+        "followSymlinks": false
+      },
+      "log_date_format" : "YYYY-MM-DD HH:mm Z",
+      "error_file": "./logs/err_wechatpublicplatform.log",  // 错误日志路径
+      "out_file": "./logs/out_wechatpublicplatform.log",  // 普通日志路径
+      "env": {
+        "NODE_ENV": "production"  // 环境参数，当前指定为生产环境
+      }
+    }
+  ]
+}
