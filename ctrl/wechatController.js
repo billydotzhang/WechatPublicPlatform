@@ -18,7 +18,6 @@ module.exports = {
 
         console.log(req.query);
 
-
         //3.将三个参数字符串拼接成一个字符串进行sha1加密
         var tempStr = array.join('');
         const hashCode = crypto.createHash('sha1'); //创建加密类型 
