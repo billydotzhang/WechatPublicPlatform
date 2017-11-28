@@ -42,13 +42,11 @@ module.exports = {
             "xml": {
                 "ToUserName": jsObj.FromUserName,
                 "FromUserName": jsObj.ToUserName,
-                "CreateTime": "12345678",
+                "CreateTime": Date.now(),
                 "MsgType": "text",
                 "Content": "你问我：" + jsObj.Content + "吗？"
             }
         }
-
-
      
 
         const xml = UTIL.other.xml2jsObj(retMessage);
